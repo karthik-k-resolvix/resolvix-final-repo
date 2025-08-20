@@ -167,7 +167,7 @@ export default function SignUp() {
           {/* Logo */}
           <div className="text-center mb-8">
             <div className="flex items-center justify-center space-x-2 mb-2">
-              <img src = "/public/assets/Logo.png" width="50" height="60"/>
+              <img src = "/assets/Logo.png" width="50" height="60"/>
             </div>
             <h1 className="text-xl font-bold text-blue-600 tracking-wide">
               RESOLVIX
