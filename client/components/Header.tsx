@@ -6,7 +6,7 @@ export default function Header() {
       {/* Header */}
       <div className="mx-auto flex max-w-6xl items-center justify-between">
         {/* Logo or Icon */}
-        <img src = "/public/assets/Logo.png" width="50" height="60"/>
+        <img src = "/assets/Logo.png" width="50" height="60"/>
 
         {/* Navigation Links */}
         <nav className="hidden md:flex items-center space-x-8">
