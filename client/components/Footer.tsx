@@ -35,7 +35,7 @@ const [email, setEmail] = useState('');
         <div className="mx-auto max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <img src = "/public/assets/Logo.png" width="50" height="60"/>
+              <img src = "/assets/Logo.png" width="50" height="60"/>
               <p className="text-gray-400 text-sm">
                 Empowering businesses with intelligent customer support
                 solutions.
