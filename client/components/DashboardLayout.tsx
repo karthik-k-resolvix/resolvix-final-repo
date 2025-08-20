@@ -108,7 +108,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
             {/* Logo */}
             <div className="flex items-center h-16 flex-shrink-0 px-6 border-b border-gray-200">
               <Link to="/dashboard" className="flex items-center space-x-2">
-                <img src="/public/assets/Logo.png" width="50" height="60" />
+                <img src="/assets/Logo.png" width="50" height="60" />
                 <span className="text-xl font-bold text-blue-600">
                   RESOLVIX
                 </span>
