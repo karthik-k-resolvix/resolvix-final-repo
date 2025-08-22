@@ -70,10 +70,8 @@ const handleStartToday = () => {
                 </Button>
               </div>
             </div>
-            <div className="relative">
-              <div className="w-full h-96 bg-gradient-to-br from-orange-400 via-red-400 to-purple-500 rounded-full flex items-center justify-center">
-                <div className="text-6xl">👩‍💻</div>
-              </div>
+            <div className="relative" >
+              <img src = "/assets/heroimage.png" width="700" height="500" border-radius='10%'/>
             </div>
           </div>
         </div>
