@@ -284,7 +284,7 @@ export default function EmailManagement() {
       fd.append("brand_email_forwarder", emailId);
 
       const res = await fetch(
-        "https://n8n.srv756188.hstgr.cloud/webhook/0c9179ea-a908-406d-80c1-3740c39348c2",
+        "https://n8n.srv756188.hstgr.cloud/webhook/1d1725bd-f9d4-4979-a9d3-be53d115c57d",
         {
           method: "POST",
           body: fd,

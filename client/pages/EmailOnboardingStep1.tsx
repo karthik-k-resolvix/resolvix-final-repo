@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Info } from "lucide-react";
 import {
   Select,
   SelectContent,
@@ -10,9 +11,12 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { ArrowRight, ArrowLeft, Upload, FileText, Check } from "lucide-react";
+import InfoBubble from "@/components/InfoBubble";
+import DownloadTemplate from "@/components/DownloadTemplate";
 
 export default function EmailOnboarding() {
   const [step, setStep] = useState(1);
+  const [open, setOpen] = useState(false);
   const [formData, setFormData] = useState({
     brandName: "",
     website: "",
@@ -95,10 +99,12 @@ export default function EmailOnboarding() {
   const FileUploadSection = ({
     label,
     field,
+    text,
     required = false,
   }: {
     label: string;
     field: keyof typeof formData;
+    text: string;
     required?: boolean;
   }) => {
     const file = formData[field] as File | null;
@@ -107,6 +113,7 @@ export default function EmailOnboarding() {
       <div className="space-y-3">
         <Label className="text-black font-medium">
           {label} {required && <span className="text-red-300">*</span>}
+           <InfoBubble text={text} />
         </Label>
         <div className="relative">
           <input
@@ -170,16 +177,21 @@ export default function EmailOnboarding() {
               </Select>
             </div>
 
-            <FileUploadSection label="Upload the service guide for your customer support." field="serviceGuide" required />
-            <FileUploadSection label="Upload FAQs for your site." field="faqs" />
-            <FileUploadSection label="Upload your product catalog." field="productCatalog" />
+            <FileUploadSection label="Upload the service guide for your customer support." field="serviceGuide" required text="Give instructions on what type of services your provide and the usual issues that are reported" />
+            <DownloadTemplate filepath='Service Guide Template'/>
+            <FileUploadSection label="Upload FAQs for your site." field="faqs" text="Please help provide the frequently raised issues/asked questions to help understand user's issues better. Please share them in the format of question and answers in pdf format."/>
+            <FileUploadSection label="Upload your product catalog." field="productCatalog" text="Provide links to your products which can be accessed by Resolvix to develop an understanding of your products. Share in the format of Product name and the hyperlink in the pdf format." />
 
             <div className="space-y-2">
-              <Label>Special instructions for AI?</Label>
+              <Label>Special instructions for Resolvix Tech?</Label>
+              <InfoBubble text="Special instructions could be any further requirements on how do we want the AI to reply, any special instructions for any platform specific issues reported etc."/>
               <textarea
                 value={formData.specialInstructions}
                 onChange={(e) => updateField("specialInstructions", e.target.value)}
-                placeholder="Write your instructions here..."
+                placeholder="Write your instructions here...
+                Eg: AI should be more empathetic for issues reported on LinkedIN.
+                Avoid sentences like - platform is responsible for merchant's products
+                Ask for proof always etc."
                 className="w-full rounded-lg border border-gray-300 px-4 py-3 resize-none"
               />
             </div>
