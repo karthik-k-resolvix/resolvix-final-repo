@@ -41,9 +41,19 @@ const handleStartToday = () => {
   return (
     <div className="min-h-screen bg-white">
       <Header/>
-
+    <div className="bg-gray-50 w-full bg-gradient-to-r from-indigo-600 to-blue-600 text-white text-center py-2 px-4 flex flex-col md:flex-row md:items-center md:justify-center gap-2 shadow-md rounded-xl md:rounded-full max-w-4xl mx-auto mt-4 animate-pulse">
+  <span className="text-lg md:text-xl font-semibold">
+    🚀 Launch Offer: <span className="text-yellow-300">Your 10 customer issues are on us!</span>
+  </span>
+  <a
+    href="/signUp"
+    className="bg-white text-indigo-700 font-semibold py-1 px-5 rounded-full hover:bg-blue-50 transition duration-200 text-s md:text-base"
+  >
+    Signup for Free Demo Today!
+  </a>
+</div>
       {/* Hero Section */}
-      <section className="px-6 py-16 bg-gray-50">
+      <section className="px-6 py-10 bg-gray-50">
         <div className="mx-auto max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -56,6 +66,7 @@ const handleStartToday = () => {
                 Harness your customer support data through powerful AI insights
                 and deliver exceptional customer experiences.
               </p>
+             
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button onClick={handleStartToday} className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-3 rounded-lg">
                   Start Today
@@ -69,10 +80,13 @@ const handleStartToday = () => {
                   Book a Demo
                 </Button>
               </div>
+              
             </div>
             <div className="relative" >
               <img src = "/assets/heroimage.png" width="700" height="500" border-radius='10%'/>
             </div>
+            
+
           </div>
         </div>
       </section>

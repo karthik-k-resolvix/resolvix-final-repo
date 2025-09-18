@@ -361,6 +361,7 @@ export default function EmailManagement() {
     //   .eq("brand_contact_email", brand_contact_email);
   };
 
+
   const getStatusIcon = (status: string) => {
     switch (status) {
       case "active":
@@ -425,6 +426,13 @@ export default function EmailManagement() {
                 Manage your customer support email accounts and their AI-powered
                 responses
               </p>
+            </div>
+            <div className="mt-2 sm:mt-0">
+              <Link to="/register?demo=true">
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+                  Signup for Demo
+                </Button>              
+              </Link>
             </div>
             <div className="mt-4 sm:mt-0">
               <Link to="/register">

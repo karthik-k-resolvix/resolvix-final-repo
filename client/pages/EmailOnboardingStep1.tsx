@@ -13,8 +13,11 @@ import {
 import { ArrowRight, ArrowLeft, Upload, FileText, Check } from "lucide-react";
 import InfoBubble from "@/components/InfoBubble";
 import DownloadTemplate from "@/components/DownloadTemplate";
+import { useSearchParams } from 'react-router-dom'
 
 export default function EmailOnboarding() {
+const [searchParams, setSearchParams] = useSearchParams();
+const demo = searchParams.get('demo');
   const [step, setStep] = useState(1);
   const [open, setOpen] = useState(false);
   const [formData, setFormData] = useState({
@@ -28,6 +31,7 @@ export default function EmailOnboarding() {
     productCatalog: null as File | null,
     specialInstructions: "",
   });
+
 
   const brand_contact_email = sessionStorage.getItem('brand_contact_email') || {};
 
@@ -78,7 +82,14 @@ export default function EmailOnboarding() {
 
      console.log(metadata);
       console.log(JSON.stringify(fd));
-      const res = await fetch('https://n8n.srv756188.hstgr.cloud/webhook/ce367d9c-cb7c-47ad-acf9-a551a5083a70', {
+        let url = '';
+      if(demo){
+url = 'https://n8n.srv756188.hstgr.cloud/webhook/dabe3e14-ff1b-45b4-8e97-54ce7e96919d';
+      }
+      else{
+        url = 'https://n8n.srv756188.hstgr.cloud/webhook/ce367d9c-cb7c-47ad-acf9-a551a5083a70';
+      }
+      const res = await fetch(url, {
         method: 'POST',
         body: fd,
       });
