@@ -45,7 +45,7 @@ const handleStartToday = () => {
   <span className="text-lg md:text-xl font-semibold">
     🚀 Launch Offer: <span className="text-yellow-300">Your 10 customer issues are on us!</span>
   </span>
-  <Button onClick={handleStartToday} className="border-gray-300 text-gray-700 px-8 py-3 rounded-lg transition duration-200 text-s md:text-base">
+  <Button onClick={handleStartToday} className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-3 rounded-lg">
                 Signup for Free Demo Today!
                 </Button>
     
