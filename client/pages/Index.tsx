@@ -46,7 +46,7 @@ const handleStartToday = () => {
     🚀 Launch Offer: <span className="text-yellow-300">Your 10 customer issues are on us!</span>
   </span>
   <a
-    href="/signUp"
+    href="/signup"
     className="bg-white text-indigo-700 font-semibold py-1 px-5 rounded-full hover:bg-blue-50 transition duration-200 text-s md:text-base"
   >
     Signup for Free Demo Today!
