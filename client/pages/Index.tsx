@@ -45,7 +45,7 @@ const handleStartToday = () => {
   <span className="text-lg md:text-xl font-semibold">
     🚀 Launch Offer: <span className="text-yellow-300">Your 10 customer issues are on us!</span>
   </span>
-  <Button onClick={handleStartToday} className="bg-white text-indigo-700 font-semibold py-1 px-5 rounded-full hover:bg-blue-50 transition duration-200 text-s md:text-base">
+  <Button onClick={handleStartToday} className="text-indigo-700 font-semibold py-1 px-5 rounded-full hover:bg-blue-50 transition duration-200 text-s md:text-base">
                 Signup for Free Demo Today!
                 </Button>
     
