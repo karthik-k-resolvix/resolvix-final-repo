@@ -1,6 +1,14 @@
 // scripts/sitemap/index.js
 import fs from "fs";
 import { SitemapStream, streamToPromise } from "sitemap";
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+// If you need __dirname equivalent in ESM:
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 
 const SITE_URL = "https://resolvix.tech";
 
