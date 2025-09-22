@@ -25,8 +25,8 @@
     "@heroicons/react": "^2.0.18",
     "@supabase/supabase-js": "^2.39.4",
     "express": "^4.18.2",
-    "zod": "^3.23.8",
-    "sitemap": "^7.1.2"
+    "sitemap": "^7.1.2",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@hookform/resolvers": "^3.9.0",
@@ -100,6 +100,7 @@
     "typescript": "^5.5.3",
     "vaul": "^0.9.3",
     "vite": "^6.2.2",
+    "vite-plugin-sitemap": "^0.8.2",
     "vitest": "^3.1.4"
   }
 }
