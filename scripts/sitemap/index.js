@@ -1,10 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
 
 export default async function generateSitemap() {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -13,6 +8,11 @@ export default async function generateSitemap() {
   <url><loc>https://resolvix.tech/pricing</loc></url>
 </urlset>`;
 
-  fs.writeFileSync(path.join(__dirname, '../../public', 'sitemap.xml'), sitemap, 'utf8');
-  console.log('✅ Sitemap generated');
+  const projectRoot = process.cwd();
+  const publicDir = path.join(projectRoot, 'public');
+
+  fs.mkdirSync(publicDir, { recursive: true });
+  fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap, 'utf8');
+
+  console.log('✅ Sitemap generated at public/sitemap.xml');
 }
