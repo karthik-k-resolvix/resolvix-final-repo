@@ -23,9 +23,10 @@ async function generateSitemap() {
     smStream.end();
 
     const sitemap = await streamToPromise(smStream).then((sm) => sm.toString());
- fs.writeFileSync(path.join(__dirname, 'dist','spa', 'sitemap.xml'), sitemap, "utf8");
+ //fs.writeFileSync(path.join(__dirname, 'dist','spa', 'sitemap.xml'), sitemap, "utf8");
 
-fs.writeFileSync(path.join(__dirname, 'public', 'sitemap.xml'), sitemap, 'utf8');
+fs.writeFileSync(path.join(__dirname, '../../public/sitemap.xml'), sitemap, 'utf8');
+
 
 
     console.log("✅ Sitemap generated at public/sitemap.xml");
